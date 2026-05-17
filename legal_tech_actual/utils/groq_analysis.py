@@ -40,7 +40,11 @@ Rules:
 - Provide at least 3-5 risky_clauses, 3-5 recommendations, 2-4 key_obligations, 2-4 missing_protections if it is a legal document.
 - Be as specific as possible. Quote actual text from the contract where possible.
 - If something is not present in the contract, write "Not specified in the contract" for that field.
-- Risk score: 1-3 = Low Risk, 4-6 = Medium Risk, 7-10 = High Risk.
+- VERY IMPORTANT FOR RISK SCORE: Calculate the risk_score (1-10) dynamically based on the severity and frequency of the risky clauses found.
+  * 1-3 = Low Risk (Standard, well-balanced contract with minor or no risky clauses)
+  * 4-6 = Medium Risk (Slightly one-sided, missing standard protections, or containing a few medium severity risky clauses)
+  * 7-10 = High Risk (Highly one-sided, draconian clauses, unlimited liability, highly unfair terms, multiple high-severity risky clauses)
+- Do NOT just default to 8. Read the contract and assign an accurate score.
 """
 
 def analyze_contract(text: str) -> dict:
