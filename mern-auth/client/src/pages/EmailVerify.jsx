@@ -68,12 +68,12 @@ const EmailVerify = () => {
         onClick={() => navigate('/')} 
         src={assets.logo} 
         alt="Logo" 
-        className='absolute left-5 sm:left-20 top-5 w-28 sm:w-32 cursor-pointer'
+        className='absolute left-4 sm:left-20 top-4 sm:top-5 w-24 sm:w-32 cursor-pointer'
       />
 
-      <div className='bg-slate-900/80 backdrop-blur-xl rounded-3xl shadow-2xl p-10 w-full max-w-md text-indigo-100'>
-        <div className='text-center mb-8'>
-          <h2 className='text-3xl font-bold mb-2 text-white tracking-tight'>Email Verification</h2>
+      <div className='bg-slate-900/80 backdrop-blur-xl rounded-3xl shadow-2xl p-6 sm:p-10 w-full max-w-md text-indigo-100 border border-slate-700/50 mt-16 sm:mt-0'>
+        <div className='text-center mb-6 sm:mb-8'>
+          <h2 className='text-2xl sm:text-3xl font-bold mb-2 text-white tracking-tight'>Email Verification</h2>
           <p className='text-indigo-200/70 text-sm'>Enter the 6-digit code sent to your email</p>
         </div>
 
@@ -84,7 +84,7 @@ const EmailVerify = () => {
                 key={index} 
                 type="text" 
                 maxLength="1" 
-                className='w-12 h-14 text-center text-2xl font-bold rounded-xl bg-[#1e293b]/50 border border-slate-700 text-white outline-none focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 transition-all' 
+                className='w-10 h-12 sm:w-12 sm:h-14 text-center text-xl sm:text-2xl font-bold rounded-xl bg-[#1e293b]/50 border border-slate-700 text-white outline-none focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 transition-all' 
                 ref={e => inputRefs.current[index] = e} 
                 onInput={(e) => handleInput(e, index)} 
                 onKeyDown={(e) => handleKeyDown(e, index)} 
@@ -93,7 +93,7 @@ const EmailVerify = () => {
             ))}
           </div>
 
-          <button className='w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-bold py-4 rounded-2xl shadow-xl shadow-blue-500/20 transform active:scale-[0.98] transition-all duration-200'>
+          <button className='w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-bold py-3 sm:py-4 rounded-2xl shadow-xl shadow-blue-500/20 transform active:scale-[0.98] transition-all duration-200'>
             Verify Email
           </button>
         </form>

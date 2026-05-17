@@ -66,7 +66,7 @@ const Login = () => {
     <div className="flex items-center justify-center min-h-screen px-6 sm:px-0 bg-gradient-to-br from-blue-200 to-purple-400">
       <button
         onClick={() => navigate("/")}
-        className="absolute left-5 sm:left-20 top-5 flex items-center gap-2 text-slate-800 font-semibold hover:text-slate-600 transition-all bg-white/40 backdrop-blur-lg px-6 py-2.5 rounded-full border border-white/50 shadow-lg active:scale-95"
+        className="absolute left-4 sm:left-20 top-4 sm:top-5 flex items-center gap-2 text-slate-800 font-semibold hover:text-slate-600 transition-all bg-white/40 backdrop-blur-lg px-4 sm:px-6 py-2 sm:py-2.5 rounded-full border border-white/50 shadow-lg active:scale-95 text-sm sm:text-base"
       >
         <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
@@ -74,9 +74,9 @@ const Login = () => {
         Back
       </button>
 
-      <div className="bg-slate-900/80 backdrop-blur-xl rounded-3xl shadow-2xl p-10 w-full max-w-md sm:w-[28rem] text-indigo-100 border border-slate-700/50">
-        <div className="text-center mb-8">
-          <h2 className="text-3xl font-bold mb-2 text-white tracking-tight">
+      <div className="bg-slate-900/80 backdrop-blur-xl rounded-3xl shadow-2xl p-6 sm:p-10 w-full max-w-md sm:w-[28rem] text-indigo-100 border border-slate-700/50 mt-16 sm:mt-0">
+        <div className="text-center mb-6 sm:mb-8">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-2 text-white tracking-tight">
             {state === "Sign Up" ? "Create Account" : "Welcome Back"}
           </h2>
           <p className="text-indigo-200/70 text-sm">
@@ -92,7 +92,7 @@ const Login = () => {
               <label className="block text-xs font-medium text-indigo-300 mb-1.5 ml-1 uppercase tracking-wider">
                 Full Name
               </label>
-              <div className="flex items-center gap-3 w-full bg-[#1e293b]/50 border border-slate-700 rounded-2xl px-5 py-3.5 focus-within:border-blue-500/50 focus-within:ring-4 focus-within:ring-blue-500/10 transition-all duration-300 hover:border-slate-600">
+              <div className="flex items-center gap-3 w-full bg-[#1e293b]/50 border border-slate-700 rounded-2xl px-4 sm:px-5 py-3 sm:py-3.5 focus-within:border-blue-500/50 focus-within:ring-4 focus-within:ring-blue-500/10 transition-all duration-300 hover:border-slate-600">
                 <img
                   src={assets.person_icon}
                   alt=""
@@ -114,7 +114,7 @@ const Login = () => {
             <label className="block text-xs font-medium text-indigo-300 mb-1.5 ml-1 uppercase tracking-wider">
               Email Address
             </label>
-            <div className="flex items-center gap-3 w-full bg-[#1e293b]/50 border border-slate-700 rounded-2xl px-5 py-3.5 focus-within:border-blue-500/50 focus-within:ring-4 focus-within:ring-blue-500/10 transition-all duration-300">
+            <div className="flex items-center gap-3 w-full bg-[#1e293b]/50 border border-slate-700 rounded-2xl px-4 sm:px-5 py-3 sm:py-3.5 focus-within:border-blue-500/50 focus-within:ring-4 focus-within:ring-blue-500/10 transition-all duration-300">
               <img
                 src={assets.mail_icon}
                 alt=""
@@ -135,7 +135,7 @@ const Login = () => {
             <label className="block text-xs font-medium text-indigo-300 mb-1.5 ml-1 uppercase tracking-wider">
               Password
             </label>
-            <div className="flex items-center gap-3 w-full bg-[#1e293b]/50 border border-slate-700 rounded-2xl px-5 py-3.5 focus-within:border-blue-500/50 focus-within:ring-4 focus-within:ring-blue-500/10 transition-all duration-300">
+            <div className="flex items-center gap-3 w-full bg-[#1e293b]/50 border border-slate-700 rounded-2xl px-4 sm:px-5 py-3 sm:py-3.5 focus-within:border-blue-500/50 focus-within:ring-4 focus-within:ring-blue-500/10 transition-all duration-300">
               <img
                 src={assets.lock_icon}
                 alt=""
@@ -165,7 +165,7 @@ const Login = () => {
           <button
             type="submit"
             disabled={isLoading}
-            className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 disabled:from-gray-600 disabled:to-gray-600 text-white font-bold py-4 rounded-2xl shadow-xl shadow-blue-500/20 transform active:scale-[0.98] transition-all duration-200 mt-2 flex items-center justify-center gap-2">
+            className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 disabled:from-gray-600 disabled:to-gray-600 text-white font-bold py-3 sm:py-4 rounded-2xl shadow-xl shadow-blue-500/20 transform active:scale-[0.98] transition-all duration-200 mt-2 flex items-center justify-center gap-2">
             {isLoading ? (
               <>
                 <span className="inline-block animate-spin">⚙️</span>
