@@ -50,13 +50,19 @@ app.use('/api/contracts', contractRoutes);
 const startServer = async () => {
   await connectDB();
 
-  app.listen(port, () => {
-    console.log(`Server is running on Port: ${port}`);
-  });
+  if (!process.env.VERCEL) {
+    app.listen(port, () => {
+      console.log(`Server is running on Port: ${port}`);
+    });
+  }
 };
 
 startServer().catch((error) => {
   console.error('Failed to start server:', error.message);
-  process.exit(1);
+  if (!process.env.VERCEL) {
+    process.exit(1);
+  }
 });
+
+export default app;
 
