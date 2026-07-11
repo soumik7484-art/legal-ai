@@ -18,7 +18,7 @@
       }
     },
     {
-      "source": "/((?!api|assets|favicon.ico).*)/?",
+      "source": "/(login|email-verify|reset-password|dashboard)",
       "destination": "/index.html"
     },
     {
