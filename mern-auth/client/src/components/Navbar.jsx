@@ -62,9 +62,9 @@ const Navbar = () => {
         <div className="relative">
           <div 
             onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-            className="flex items-center gap-2 bg-slate-900/50 backdrop-blur-md border border-white/10 px-4 py-2 rounded-full hover:border-white/20 transition-all cursor-pointer shadow-lg active:scale-95"
+            className="flex items-center gap-2 bg-[#241D1C]/65 backdrop-blur-md border border-[#FAF8F5]/10 px-4 py-2 rounded-full hover:border-[#FAF8F5]/20 transition-all cursor-pointer shadow-lg active:scale-95"
           >
-            <div className="w-8 h-8 flex items-center justify-center bg-gradient-to-tr from-blue-600 to-indigo-600 rounded-full text-white font-bold text-sm shadow-inner ring-2 ring-white/10 transition-all">
+            <div className="w-8 h-8 flex items-center justify-center bg-gradient-to-tr from-[#801C2B] to-[#A62B44] rounded-full text-white font-bold text-sm shadow-inner ring-2 ring-white/10 transition-all">
               {userData.username?.[0]?.toUpperCase()}
             </div>
             <span className="text-white text-sm font-medium hidden sm:block">
@@ -80,11 +80,11 @@ const Navbar = () => {
           {/* Dropdown Menu */}
           {isDropdownOpen && (
             <div className="absolute top-full right-0 mt-2 pt-2 z-10 w-48">
-              <div className="bg-slate-900/95 backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl overflow-hidden py-1">
+              <div className="bg-[#241D1C]/95 backdrop-blur-xl border border-[#FAF8F5]/10 rounded-2xl shadow-2xl overflow-hidden py-1">
                 <ul className="list-none m-0 p-0 text-sm">
                   {!userData.isVerified && (
                     <li 
-                      className="py-3 px-4 text-indigo-100 hover:bg-slate-800 cursor-pointer flex items-center gap-2 transition-colors border-b border-white/5" 
+                      className="py-3 px-4 text-stone-100 hover:bg-[#1C1615] cursor-pointer flex items-center gap-2 transition-colors border-b border-[#FAF8F5]/5" 
                       onClick={() => {
                         setIsDropdownOpen(false);
                         sendVerificationOtp();
@@ -115,7 +115,7 @@ const Navbar = () => {
       ) : (
         <button
           onClick={() => navigate("/login")}
-          className="bg-white/10 backdrop-blur-md border border-white/20 text-white flex items-center gap-2 px-8 py-2.5 rounded-full hover:bg-white hover:text-black transition-all duration-300 font-semibold shadow-lg active:scale-95 group"
+          className="bg-[#241D1C]/60 backdrop-blur-md border border-[#FAF8F5]/10 text-[#FAF8F5] flex items-center gap-2 px-8 py-2.5 rounded-full hover:bg-[#801C2B] hover:border-[#801C2B] transition-all duration-300 font-semibold shadow-lg active:scale-95 group"
         >
           Login
           <img

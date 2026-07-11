@@ -5,6 +5,7 @@ import cookieParser from 'cookie-parser';
 import connectDB from './config/mongodb.js'
 import authRoutes from './routes/authRoutes.js';
 import userRoutes from './routes/userRoutes.js';
+import contractRoutes from './routes/contractRoutes.js';
 
 const app = express();
 const port = process.env.PORT || 5000;
@@ -44,6 +45,7 @@ app.use((req, req_res, next) => {
 app.get('/', (req, res) => res.send('API WORKING'));
 app.use('/api/auth', authRoutes);
 app.use('/api/users', userRoutes);
+app.use('/api/contracts', contractRoutes);
 
 const startServer = async () => {
   await connectDB();

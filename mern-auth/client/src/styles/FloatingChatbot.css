@@ -16,11 +16,11 @@
   width: 60px;
   height: 60px;
   border-radius: 30px;
-  background: var(--accent, #2f81f7);
+  background: var(--accent, #801C2B);
   color: white;
   border: none;
   cursor: pointer;
-  box-shadow: 0 8px 24px rgba(47, 129, 247, 0.4);
+  box-shadow: 0 8px 24px rgba(128, 28, 43, 0.35);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -30,7 +30,7 @@
 
 .chatbot-toggle-btn:hover {
   transform: scale(1.05) translateY(-5px);
-  box-shadow: 0 12px 32px rgba(47, 129, 247, 0.5);
+  box-shadow: 0 12px 32px rgba(128, 28, 43, 0.45);
 }
 
 .chatbot-window {
@@ -75,7 +75,7 @@
   font-weight: 700;
   color: var(--text-primary);
 }
-.header-info i { color: var(--accent); }
+.header-info i { color: var(--warning, #C49A45); }
 
 .close-btn {
   background: none;

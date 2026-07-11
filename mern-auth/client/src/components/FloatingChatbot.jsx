@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from "react";
+import axios from "../api/axios";
 import "../styles/FloatingChatbot.css";
 
 const FloatingChatbot = () => {
@@ -32,24 +33,21 @@ const FloatingChatbot = () => {
     setIsLoading(true);
 
     try {
-      const API_BASE = import.meta.env.VITE_LEGAL_TECH_API_URL || "http://localhost:8000";
-      const response = await fetch(`${API_BASE}/general-chat`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          question: userMessage,
-          history: messages.map((m) => ({
-            role: m.role === "bot" ? "assistant" : "user",
-            content: m.content,
-          })),
-        }),
+      const response = await axios.post("/api/contracts/general-chat", {
+        question: userMessage,
+        history: messages.map((m) => ({
+          role: m.role === "bot" ? "assistant" : "user",
+          content: m.content,
+        })),
       });
 
-      if (!response.ok) throw new Error("Failed to get response");
-
-      const data = await response.json();
-      setMessages((prev) => [...prev, { role: "bot", content: data.response }]);
+      if (response.data.success) {
+        setMessages((prev) => [...prev, { role: "bot", content: response.data.response }]);
+      } else {
+        throw new Error(response.data.message || "Failed to get response");
+      }
     } catch (error) {
+      console.error(error);
       setMessages((prev) => [
         ...prev,
         { role: "bot", content: "Sorry, I'm having trouble connecting right now." },
