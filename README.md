@@ -4,6 +4,24 @@ LegalAssist is a unified, enterprise-grade MERN platform designed for startups, 
 
 Unlike typical glowing neon "AI" tools, LegalAssist is crafted with a **sophisticated, warm editorial aesthetic** (royal burgundy, warning gold, warm ivory, and deep charcoal) that reflects the trust, security, and precision of a traditional digital law office.
 
+🚀 **Live Deployment URL**: **[https://legal-assist-ai-ten.vercel.app](https://legal-assist-ai-ten.vercel.app)**
+
+---
+
+## 📸 Product Screenshots
+
+### 1. User Authentication (Signup)
+A clean, minimalist authentication page styled in warm ivory, deep espresso, and a burgundy action button to welcome users to the platform.
+![Create Account Signup Form](assets/signup_screenshot.png)
+
+### 2. Main Compliance & Auditing Dashboard
+Features a persistent left-hand documents library panel to toggle between previously audited contracts, displaying critical metrics, obligations, metadata, and an animated red-green circular risk score.
+![Executive Dashboard & Compliance Report](assets/dashboard_screenshot.png)
+
+### 3. Integrated Legal Consultation Chatbot
+Ask follow-up questions, request definitions, or audit specific clauses inside the contract with a context-aware legal assistant.
+![AI Legal Dialogue & Chatbot](assets/chatbot_screenshot.png)
+
 ---
 
 ## 🎨 Premium Visual & UI Redesign
@@ -27,6 +45,7 @@ Consolidated the system from a multi-server framework (FastAPI + Node.js) into a
 
 ```
 legal-assist-ai/
+├── assets/                   # README Product Screenshots
 ├── mern-auth/
 │   ├── server/               # Express.js Backend (Port 5000)
 │   │   ├── config/           # Database & Mail configuration
