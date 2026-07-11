@@ -10,17 +10,29 @@ Unlike typical glowing neon "AI" tools, LegalAssist is crafted with a **sophisti
 
 ## 📸 Product Screenshots
 
-### 1. User Authentication (Signup)
-A clean, minimalist authentication page styled in warm ivory, deep espresso, and a burgundy action button to welcome users to the platform.
-![Create Account Signup Form](assets/signup_screenshot.png)
+### 1. Main Compliance & Auditing Dashboard
+A premium, editorial contract audit panel displaying compliance reports, metadata, critical metrics, and our animated red-green circular risk score.
+<p align="center">
+  <img src="assets/dashboard_screenshot.png" alt="Executive Dashboard" width="100%" />
+</p>
 
-### 2. Main Compliance & Auditing Dashboard
-Features a persistent left-hand documents library panel to toggle between previously audited contracts, displaying critical metrics, obligations, metadata, and an animated red-green circular risk score.
-![Executive Dashboard & Compliance Report](assets/dashboard_screenshot.png)
+<br/>
 
-### 3. Integrated Legal Consultation Chatbot
-Ask follow-up questions, request definitions, or audit specific clauses inside the contract with a context-aware legal assistant.
-![AI Legal Dialogue & Chatbot](assets/chatbot_screenshot.png)
+### 2. User Authentication & Legal Chatbot
+<table border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr>
+    <td align="center" valign="top" width="50%">
+      <strong>Minimalist Signup Form</strong><br/>
+      <sub>Espresso backgrounds with burgundy accents</sub><br/><br/>
+      <img src="assets/signup_screenshot.png" alt="Sign Up Page" width="85%" />
+    </td>
+    <td align="center" valign="top" width="50%">
+      <strong>Interactive Legal Chatbot</strong><br/>
+      <sub>Specialized context-aware dialogue</sub><br/><br/>
+      <img src="assets/chatbot_screenshot.png" alt="Legal Chatbot" width="85%" />
+    </td>
+  </tr>
+</table>
 
 ---
 
